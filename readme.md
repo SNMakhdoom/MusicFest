@@ -23,6 +23,17 @@ Lineup Page (lineup.ejs): Displays the complete lineup of artists performing at 
 Stages Page (stages.ejs): Provides information about the different stages at the music festival, presenting stage data in a tabular format with names, descriptions, and locations.
 FAQs Page (faq.ejs): Addresses frequently asked questions about the music festival, rendering FAQ data obtained from the server.
 Contact Page (contact.ejs): Allows users to get in touch with the event organizers, providing a form for submitting inquiries or messages.
+
+### Images
+
+
+![Home](images/Home)
+![FAQ](images/FAQ)
+![Lineup](images/lineup)
+![Stages](images/Stages)
+![Contact](images/contact)
+
+
 ### Challenges and Future Enhancements
 The development process of the MusicFest web application faced the following challenges and proposes future enhancements:
 
@@ -31,3 +42,4 @@ User Authentication: Implementing user registration, login, and access control w
 Performance Optimization: Various optimizations such as caching frequently accessed data, minimizing database queries, and optimizing client-side scripts and assets can be implemented to improve the application's performance.
 ### Conclusion
 The MusicFest web application provides music festival enthusiasts with a comprehensive platform to access lineup details, stage information, FAQs, and contact information. Built using Node.js, Express.js, Amazon RDS, and EJS, the application delivers a seamless user experience. For more information about the technologies used, please refer to the provided references.
+
