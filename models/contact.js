@@ -3,7 +3,7 @@ const mysql = require('mysql2/promise');
 const pool = mysql.createPool({
     host: 'cis3368dall.cmjen6ln1nx7.us-east-2.rds.amazonaws.com',
     user: 'admin',
-    password: 'pakistan123',
+    password: 'xxxx',
     database: 'event_db'
 });
 
