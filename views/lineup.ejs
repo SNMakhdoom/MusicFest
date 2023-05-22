@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Name - Lineup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Event Name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/lineup">Lineup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/stages">Stages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="mt-4 mb-3">Lineup</h1>
+
+        <% if (lineup.length > 0) { %>
+            <div class="row">
+                <% lineup.forEach(function(act) { %>
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h2 class="card-title"><%= act.track_name %></h2>
+                                <p class="card-text"><%= act.artist_name %></p>
+                                <img src="<%= act.artwork_url %>" alt="<%= act.track_name %>">
+                                <p class="card-text"><small class="text-muted">Performing on <%= act.date_time %> at <%= act.stage_name %></small></p>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } else { %>
+            <div class="alert alert-info" role="alert">
+                No lineup data available.
+            </div>
+        <% } %>
+    </main>
+
+    <footer class="py-5 bg-light">
+        <div class="container">
+            <p class="m-0 text-center">&copy; 2023 Event Name</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicFest - FAQ</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            width: 60%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            margin: 0;
+            padding: 10px;
+            background-color: #657786;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 15px 15px 0 0;
+        }
+
+        section p {
+            display: none;
+            padding: 10px;
+            margin: 0;
+            background-color: #e1e8ed;
+            border-radius: 0 0 15px 15px;
+        }
+
+        section.active p {
+            display: block;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(section => {
+                section.querySelector('h2').addEventListener('click', () => {
+                    section.classList.toggle('active');
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="/">MusicFest</a>
+        <a href="/lineup">Lineup</a>
+        <a href="/stages">Stages</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <main>
+        <h1>FAQ</h1>
+
+        <% faq.forEach(function(question) { %>
+            <section>
+                <h2><%= question.title %></h2>
+                <p><%= question.answer %></p>
+            </section>
+        <% }) %>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MusicFest</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

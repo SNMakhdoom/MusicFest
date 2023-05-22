@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicFest - Stages</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr.even-row {
+            background-color: #f0f0f0;
+        }
+
+        tr.odd-row {
+            background-color: #ffffff;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">MusicFest</a>
+        <a href="/lineup">Lineup</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Stages</h1>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Location</th>
+            </tr>
+            <% stages.forEach(function(stage, index) { %>
+                <tr class="<%= index % 2 === 0 ? 'even-row' : 'odd-row' %>">
+                    <td><%= stage.name %></td>
+                    <td><%= stage.description %></td>
+                    <td><%= stage.location %></td>
+                </tr>
+            <% }) %>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MusicFest</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

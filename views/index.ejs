@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicFest</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <nav>
+        <a href="/">MusicFest</a>
+        <a href="/lineup">Lineup</a>
+        <a href="/stages">Stages</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    
+
+    <header>
+        <h1>Welcome to MusicFest!</h1>
+        <h2>October 1st to 31st</h2>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h3>About the Event</h3>
+            <p>MusicFest is a month-long celebration of music, bringing together talented artists from around the world. Join us from October 1st to 31st for an unforgettable experience filled with live performances, interactive workshops, and a vibrant atmosphere. Whether you're a fan of rock, pop, jazz, or any other genre, MusicFest has something for everyone. Get ready to immerse yourself in the power of music and create memories that will last a lifetime.</p>
+        </section>
+
+        <section>
+            <h3 style="text-align: center;">Highlights of the Lineup</h3>
+            <div style="background-color: #f0f0f0;" class="highlight-container">
+                <% lineup.forEach(function(act) { %>
+                    <div class="highlight-card">
+                        <div class="highlight-image">
+                            <img src="<%= act.artwork_url %>" alt="<%= act.track_name %>">
+                        </div>
+                        <div class="highlight-details">
+                            <h4><%= act.track_name %></h4>
+                            <p><%= act.artist_name %></p>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MusicFest</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
