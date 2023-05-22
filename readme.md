@@ -27,11 +27,12 @@ Contact Page (contact.ejs): Allows users to get in touch with the event organize
 ### Images
 
 
-![Home](images/Home)
-![FAQ](images/FAQ)
-![Lineup](images/lineup)
-![Stages](images/Stages)
-![Contact](images/contact)
+![Home](images/Home.png)
+![FAQ](images/FAQ.png)
+![Lineup](images/lineup.png)
+![Stages](images/Stages.png)
+![Contact](images/contact.png)
+
 
 
 ### Challenges and Future Enhancements
