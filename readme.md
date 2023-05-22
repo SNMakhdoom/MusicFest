@@ -29,7 +29,7 @@ Contact Page (contact.ejs): Allows users to get in touch with the event organize
 
 ![Home](images/Home.png)
 ![FAQ](images/FAQ.png)
-![Lineup](images/lineup.png)
+![Lineup](images/Lineup.png)
 ![Stages](images/Stages.png)
 ![Contact](images/contact.png)
 
